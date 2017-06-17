@@ -48,6 +48,10 @@ def graph():
 
     return render_template('graph.html', bv=bv, ticker=app.vars['ticker'], script=script, div=div)
 
+@app.errorhandler(500)
+def error_handler(e):
+	return render_template('error.html',ticker=app.vars['ticker'])
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
 	app.run(host='0.0.0.0', port=port,debug=False)

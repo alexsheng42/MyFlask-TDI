@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://lemurian.herokuapp.com/index -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Tiny Project</title>
+		<link rel="stylesheet" type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+		<link rel="stylesheet" href="./Tiny Project_files/bootstrap-theme.min.css">
+		<script src="./Tiny Project_files/bootstrap.min.js.download"></script>
+		<!--<link rel=stylesheet type=text/css href='/static/style.css'>-->
+	</head>
+	<body>
+		<div class="page">
+  			<h1>User Input</h1>
+  			<div class="metanav">
+
+    			<h4>Please enter a stock ticker eg. GOOG.</h4>
+
+    			<form id="input" method="post" action="index_sheng">	
+	  			<p>
+					Ticker symbol: <input type="text" name="ticker">
+	  			</p>
+	  			<h4>Please select one only.</h4>
+				<p>
+					<input type="checkbox" name="features" value="Close">Close<br>
+					<input type="checkbox" name="features" value="Adj. Close">Adj. Close<br>
+					<input type="checkbox" name="features" value="Open">Open<br>
+					<input type="checkbox" name="features" value="Adj. Open">Adj. Open<br>
+	  			</p>
+				<p>
+				<input type='submit' value='Submit'>
+				</p>
+				</form>
+
+  			</div>
+		</div>
+	
+</body></html>

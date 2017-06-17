@@ -44,9 +44,9 @@ def chart():
     return	render_template('graph.html', bv=bv, ticker=app.vars['ticker'], script=script, div=div)
 
 if __name__ == "__main__":
-	port = int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0', port=port,debug=True)
-	#app.run(debug=True)
+	#port = int(os.environ.get("PORT", 5000))
+	#app.run(host='0.0.0.0', port=port,debug=Flase)
+	app.run(port=33507,debug=False)
 
 
 

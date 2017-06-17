@@ -25,11 +25,11 @@ def index_sheng():
     else:
         app.vars['ticker'] = request.form['ticker']
         app.vars['select'] = request.form.values()
-        return redirect('/chart')
+        return redirect('/graph')
 
-@app.route('/chart',methods=['GET','POST'])
-def chart():
-    ticker = app.vars['ticker']
+@app.route('/graph',methods=['GET','POST'])
+def graph():
+    ticker = app.vars['ticker'].upper()
     select = app.vars['select'][1]
     res = requests.get("https://www.quandl.com/api/v3/datasets/WIKI/"+str(ticker)+".json?start_date=2017-05-01&end_date=2017-06-01&frequency=daily&api_key=mRVPnQBf9hpYoxLWA_iA")
     df = pd.DataFrame(res.json()['dataset']['data'],columns=res.json()['dataset']['column_names']).set_index('Date')   

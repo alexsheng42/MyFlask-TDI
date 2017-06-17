@@ -46,7 +46,7 @@ def graph():
     #p.legend.location = "top_left"
     script,div = components(plot)
 
-    return	render_template('graph.html', bv=bv, ticker=app.vars['ticker'], script=script, div=div)
+    return render_template('graph.html', bv=bv, ticker=app.vars['ticker'], script=script, div=div)
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
